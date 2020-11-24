@@ -126,7 +126,7 @@ mHoriWin player board = horiWin player (head board) || horiWin player (board !! 
 
 --check horizontal wins
 horiWin :: Player -> [Player] -> Bool
-horiWin player []     = True
+horiWin _      []     = True
 horiWin player (x:xs) | player == x = horiWin player xs
                       | otherwise = False
 
