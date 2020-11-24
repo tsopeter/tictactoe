@@ -141,7 +141,7 @@ dWin player board = rDiagonalWin 0 1 player board || rDiagonalWin 2 (-1) player 
 rDiagonalWin :: Int -> Int -> Player -> [[Player]] -> Bool
 rDiagonalWin _ _ _          [] = True
 rDiagonalWin i d player (x:xs) | player == (x !! i) = rDiagonalWin (i + d) d player xs
-                             | otherwise = False
+                               | otherwise = False
 
 --check to see win
 win :: Player -> [[Player]] -> Bool
